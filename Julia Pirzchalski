@@ -1,0 +1,609 @@
+Nayab
+Title: Tips for Debugging in Python
+Note: Debugging can be challenging when working with any type of program but here are some tips to improve the process in Python:
+1. Use a Debugger: Using tools like 'pdb' can help guide you through the execution of your code and help you identify where things went wrong.
+2. Logging: Logging progress and making notes throughout your code would help you capture your program during the developing stages at various points which is very helpful when it comes to tracing errors.
+Links: 
+Python Debugger (pdb): https://docs.python.org/3/library/pdb.html
+Python Logging: https://docs.python.org/3/library/logging.html
+
+
+Tags: #Python #Debugging #ProgrammingTips #SoftwareDevelopment
+
+
+Title: Loading Data from a CSV File using Pandas in Python
+Code: 
+import pandas as pd
+ 
+# Load data from a CSV file
+data = pd.read_csv('data.csv')
+ 
+# Display the first five rows of the DataFrame
+print("First five rows of the DataFrame:")
+print(data.head())
+Tags: #Python #DataScience #Pandas #DataLoading
+
+
+Title: Creating python class and objects
+Code:
+(Define a class) class MyClass:
+(Constructor method) def __init__(self, x, z): 
+self.x = x
+self.z = z
+(Method) def my_method(self): return self.x + self.z 
+(Create an object of MyClass) obj = MyClass(3, 7)
+(Access attributes) print(obj.x)  print(obj.z)
+Tags: Python, OOP, Classes, Objects
+ 
+Title: Method overriding in python 
+Code:
+(Define a parent class) class Parent: def method(self): print("Parent's method")
+(Define a child class inheriting from Parent) class Child(Parent):
+(Override the method) def method(self): print("Child's method")
+Tags: Python, OOP, Method Overriding, Inheritance
+
+
+Title: Reading python files more efficiently
+Code: 
+#open file in read mode
+with open('file.txt', 'r') as file:
+
+
+#If the file is large, it's better to read it line by line
+for line in file:
+print(line.strip())
+ 
+#for files without text, use binary mode
+with open('binary_file.bin', 'rb') as file:
+ 
+Tags: #Python #FileIO #Efficiency
+
+
+Title: Reading Multiple Notes In a TXT File
+Code: with open("FileName.txt", "r") as file:
+    # Read the lines from the file
+    lines = file.readlines()
+    # Iterate through the lines 
+    for i in range(0, len(lines), __number of lines each note has__:  
+        # Extract the attributes of the note from the lines
+        title = lines[i].strip()
+        text = lines[i + 1].strip()
+     # Add more attributes if note has more such as links and tags
+        # Print the note details
+        print(title)
+        print("Text:", text)
+        # Add more print statements if there are more details
+Tags: reading_txt_files
+
+
+Title: Intro to Python Lists
+Code: # Creating a list
+fruits = ["apple", "banana", "cherry"]
+
+
+# Adding an item to the end of the list
+fruits.append("orange")
+
+
+# Adding an item at a specific position
+fruits.insert(1, "blueberry")
+
+
+# Iterating through the list
+for fruit in fruits:
+    print(fruit)
+Links: https://docs.python.org/3/tutorial/datastructures.html
+Tags: #Python #Lists #ProgrammingBasics #DataStructures
+
+
+Title: Using Python Dictionaries to Lookup Data
+Code: # Creating a dictionary
+contact_info = {'John': '555-0101', 'Mary': '555-0123', 'Sue': '555-0178'}
+
+
+# Adding a new entry
+contact_info['Mike'] = '555-0222'
+
+
+# Accessing a value
+print("John's contact number:", contact_info['John'])
+
+
+# Iterating through the dictionary
+for name, number in contact_info.items():
+    print(f"{name}: {number}")
+Links: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+Tags: #Python #Dictionaries #DataStructures #EfficientLookup
+
+
+Title: Formatting Strings in Python with f-Strings
+Code: name = "Jane"
+age = 28
+
+
+# Creating an f-string
+message = f"Hello, {name}. You are {age} years old."
+
+
+print(message)  # Output: Hello, Jane. You are 28 years old.
+
+
+# Advanced usage: expressions within f-strings
+from math import pi
+print(f"Value of pi: {pi:.2f}")  # Formats pi to 2 decimal places
+Links: https://peps.python.org/pep-0498/
+Tags: #Python #StringFormatting #fStrings #CodeEfficiency
+
+
+Title: Looping Techniques in Python Using for-loops and List Comprehensions
+Code: # Example of a for-loop to iterate through a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+
+# Using a list comprehension to create a new list
+squares = [x**2 for x in range(10)]
+print(squares)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+
+# Conditional list comprehension
+even_squares = [x**2 for x in range(10) if x % 2 == 0]
+print(even_squares)  # Output: [0, 4, 16, 36, 64]
+Links: https://docs.python.org/3/tutorial/controlflow.html#for-statements
+https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
+Tags: #Python #Loops #ListComprehensions #ProgrammingBasics #EfficientCoding
+
+
+
+
+
+
+Giovanni:
+Title: List Functions and Methods
+Text/ Code snippet: 
+# Return a sorted copy of the list x
+sorted(x) # Returns [1, 2, 3]
+# Sort the list in-place (replaces x)
+x.sort() # Returns None
+# Reverse the order of elements in x
+reversed(x) # Returns [2, 3, 1]
+# Reverse the list in-place
+x.reversed() # Returns None
+# Count the number of element 2 in the list
+x.count(2)
+Link: https://www.datacamp.com/cheat-sheet/getting-started-with-python-cheat-sheet
+Tags: #Python #Lists #Functions
+
+
+Title: Writing Text to a File
+This code snippet creates a new file named output.txt and writes the content of the text_content variable into it. If the file already exists, it will be overwritten
+text_content = "Hello, this is some text that we'll write to a file."
+with open('output.txt', mode='w') as text_file:
+    text_file.write(text_content)
+print("Text successfully written to 'output.txt'")
+ Link: n/a
+Tags: #Python, #FileIO, #TextFile, #WriteToFile
+
+
+
+
+
+
+Title: Submit Method, creating a dictionary
+Note:
+title = self.note_title.get() # extract user input from title section
+        text = self.note_text.get('1.0', 'end').strip('\n') # extract user input from text section
+        tag = self.note_tags.get() # extract user input from tags section
+        link = self.note_link.get() # extract user input from link section
+        meta = meta
+        
+        note_dict = {'title':title, 'text':text, 'link':link, 'tag':tag, 'meta':meta} # create the dictionary by creating key value pairs        
+        make_note = MakeNote(note_dict) # pass the dictionary through to the creation of the MakeNote instance called make_note
+        self.notes.append(make_note) # append the instance of the class to the notes variable
+        self.notebook.append(make_note) # append the instance of the class to the notebook variable
+        self.destroy() # destroy the window
+        return note_dict # returns note_dict variable which is the dictionary
+Link:https://www.w3schools.com/python/python_dictionaries.asp
+Tags: #dictionary #submitbutton
+
+
+
+
+Title: Pandas basics
+Pandas is a data analysis and manipulation tool in python. Pandas has three data structures:deries, dataframe, and index objects.Some of the functionalities include: Reindexing, axis oeprations (drop/add), filter, sorting and ranking, etc.
+Basic example of panda:
+import pandas as pd
+mydataset = {
+  'cars': ["BMW", "Volvo", "Ford"],
+  'passings': [3, 7, 2]
+}
+myvar = pd.DataFrame(mydataset)
+print(myvar)
+Links: https://www.w3schools.com/python/pandas/pandas_getting_started.asp
+Tags: #Pandas, #basics
+
+
+Title: Data Object 
+A data object is a collection of one or more data points that create meaning as a whole. In other words, “data object” is an alternate way of saying “this group of data should be thought of as standalone.”
+Examples include:Arrays, Pointers, Records, Files, Sets and Scalar types.
+Scalar types indicates a single value rather than an aggregation like data tables, arrays, and records.
+Links: https://analystanswers.com/what-is-a-data-object-definition-types-examples/
+Tags: #Data Objects, #Scalars, #Basic Overview
+
+
+
+
+Title: Cipher Try/Except Block
+
+Text:
+if text.isnumeric() == True:
+                text = input("I cannot encrypt/decrypt a plaintext that contains numbers. Please reenter your plaintext so it only has characters.\t").lower()
+                if text.isnumeric() == True:
+                    print("You've failed to enter a valid plaintext. The program will now close.")
+                    exit()
+
+Link: https://www.w3schools.com/python/python_try_except.asp
+
+Tags: #cipher #encryption #decryption #tryexcept
+
+
+
+
+
+
+
+
+Title: CSV Reading with Pandas
+Note:
+This code shows us how to use Pandas to read data from a CSV file. This is a fundamental skill for anyone starting with data analysis in Python.
+Example:
+import pandas as pd
+df = pd.read_csv('pandas.csv')
+print(df.head())
+Associated Links:
+https://www.geeksforgeeks.org/python-read-csv-using-pandas-read_csv/
+#Tags:
+#Python #Pandas #DataAnalysis #Beginner
+
+
+
+
+Title: Python Inheritance
+Note: Inheritance allows us to define a class that inherits all the methods and properties from another class.
+Parent class is the class being inherited from, also called base class.
+Child class is the class that inherits from another class, also called derived class.
+For example:
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+	self.lastname = lname
+  def printname(self):
+     print(self.firstname, self.lastname)
+ class Student(Person):
+  pass
+The child class named "Student" will inherit the properties and methods from the parent class named "Person"
+Link: https://www.w3schools.com/python/python_inheritance.asp
+#Tags: #python #inheritence #parent #child
+
+
+Title: Using Polymorphism in Python
+Text: 
+Polymorphism is a pillar of abstraction. It allows programmers to use the same function or behavior to be carried on different objects that have a similarity. This allows for code to be reused and simplified a program. The function len() is one example of the use of polymorphism.
+Code Snippet: 
+x = "Hello World!"
+print(len(x))
+Link: https://www.w3schools.com/python/python_polymorphism.asp
+Tags: #OOP #Polymorphism #Abstraction
+
+
+Title: Writing a JSON File
+Text:  with open(f"{first_note.note_title}.json", 'w') as filename:
+json.dump(note_dict, filename)
+self.notes = [] 
+Links:
+https://www.boardinfinity.com/blog/json-file-in-python/#:~:text=JSON%20can%20also%20be%20written,file%20in%20the%20JSON%20format.
+
+
+Tags: #dump #JSON #file #currentdirectory
+
+
+
+
+Vivek:
+1) Importing and Saving Files to Txt
+Use the open function and either the 'r' or 'w' modes as necessary
+#Use with open('newfile.txt', 'r') as file: to open a file by reading it 
+#Use with open('newfile.txt', 'w') as file: to write a file 
+Always make sure to specify file path and the access mode.
+Tags: #Python #FileHandling #SavingFiles #Opening Files
+
+2) Polymorphism 
+At its highest level polymorphism is the ability for objects of different types   to call a method, which is done through method overriding
+Polymorphism occurs when a subclass provides a specific implementation of a general method that is already defined in its superclass
+By giving a general method a more specified method, this allows objects to be based of a general interface that can make your code more readable
+Tags: #python #polymorphism 
+ 
+3) Encapsulation
+Encapsulation main principles are to hide an objects private data from direct access and keeping it secure
+Access modifiers are crucial to encapsulation as we see the use of public, private, and protected when defining methods and variables to give either members of a class or members outside the class access.
+Encapsulation is crucial to a code's security and maintaining the order of what can or cannot be accessed.
+Tags: #python #encapsulation
+
+4) Opening and Saving JSON Files
+Use the open() function and serialize the data into a JSON String by using json.dumps()
+Use the reader mode ‘r’ to read the file upon opening the file
+Use the write reader mode 'w' to save it into a file that you make sure to specify the file path for, otherwise the file will be lost.
+links: https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/
+Tags: #JSON #Files #Opening #Saving
+
+5) Importing Libraries
+Typically when importing a library standard syntax is “import library_name” and it precedes all of your code at the top. 
+Additionally you can import specific functions from libraries if you use “import libary_name import function” as a template. 
+Additionally you can import using alias such as “import tkinter as tk” to make it easier to refer to in your code
+links: https://www.geeksforgeeks.org/import-module-python/
+Tags: #ImportingLibraries #Import
+
+6) Initialization Methods 
+text The __init__ method is used for initializing objects.
+It serves as a constructor method where you can define attributes for the intialization of an object.
+The parameter self is automatically passed in the __init__ method and refers back to the object
+Tags: #init #initialiazation #constructor
+
+7) Python Libraries
+Common libraries you can import are NumPy, Pandas, MatplotLib, Requests, amongst many others.
+Use the import then followed by the library name to use a library in your code below
+You can also use an import library_name as ‘alias’ format to give a library a local alias which can help the readability of your code.
+You can also the from keyword to import a specific function or class from a library
+Tags: #Libraries #Importing #PythonLibraries #Pandas
+
+8) Error Handling 
+Use a try block to enclose code that could cause an error
+Use catch exceptions with an except block to handle the error
+A finally block can be used when handling errors to execute specific code regardless of the try and except. 
+Python has several built-in exceptions such as IndexError, TypeError, and FileNotFoundError that handle these specific exception types.
+Links: https://docs.python.org/3/tutorial/errors.html
+Tags: #ErrorHandling #Exceptions #TryExcept #Errors
+
+9) Lists in Python
+A list is a list of item in python that is ordered and can be accessed through specific indices
+Lists in python are mutable and can contain duplicate values
+They are created using [] brackets and can be accessed iteratively through a loop or in a sequence.
+Tags: #Python #Lists #Mutable 
+
+
+
+10) Tuples in Python
+Tuples are immutable sequences in Python and can be used to store a collection of items of different types.
+They are created using () parentheses for example 
+New_tuple = (1, “hello world”, False) 
+You can access elements in a Tuple by using indices and slice tuples as well to get specific elements
+Tuples are mostly used for data that isn’t going to change as it is immutable
+Links: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
+Tags: #Python #Tuples #Immutable 
+
+
+Julia’s Notes:
+Note 1
+
+
+Title: Pandas basics
+
+
+Pandas is a data analysis and manipulation tool in python. Pandas has three data structures:deries, dataframe, and index objects.Some of the functionalities include: Reindexing, axis operations (drop/add), filter, sorting and ranking, etc.
+
+
+Basic example of panda:
+
+
+import pandas as pd
+
+
+mydataset = {
+  'cars': ["BMW", "Volvo", "Ford"],
+  'passings': [3, 7, 2]
+}
+
+
+myvar = pd.DataFrame(mydataset)
+
+
+print(myvar)
+
+
+links:https://www.w3schools.com/python/pandas/pandas_getting_started.asp
+
+
+Tags: #Pandas, #basics
+
+
+Note 2
+
+
+Title: Data Object 
+
+
+A data object is a collection of one or more data points that create meaning as a whole. In other words, “data object” is an alternate way of saying “this group of data should be thought of as standalone.”
+
+
+Examples include:Arrays, Pointers, Records, Files, Sets and Scalar types.
+
+
+Scalar types indicate a single value rather than an aggregation like data tables, arrays, and records.
+
+
+Link:https://analystanswers.com/what-is-a-data-object-definition-types-examples/
+
+
+Tags: #Data Objects, #Scalars, #Basic Overview
+
+
+Note 3:
+
+
+Title: Json Files
+
+
+Json stands for JavaScript object notation. It can be used to manipulate files. The following are two possible ways to manipulate files:
+
+
+Save:
+
+
+import json
+with open("notes1.json", "w") as jsonfile:
+    json.dump(notes, jsonfile)
+Read:
+with open("notes1.json", "r") as jsonfile:
+    new_notes_json = json.load(jsonfile)
+ This is the general format; however, you should remember to type the correct file name to edit. Also, you should be careful when you want to save or write the file, you should use "w" and if you want to read the file to parse it for later, use "r."
+
+
+No Link
+
+
+#JSON #Files #Save #Read
+
+
+ 
+
+
+Note 4:
+
+
+Title: Basics of OOP
+
+
+OOP stands for object-oriented programming. OOP uses classes which work similarly to a function, except it can hold shorter functions and objects inside of it. It must have the world class in front of it: "class makeNote():" Classes as well as functions can be called on. Typically, to the right of the period is what's called an attribute. Attributes can be a variable, a function, or an object and it depends what is to the left of the period which could be a class or a function depending on the code.
+
+
+class note1():
+    def __init__(self):
+        pass #ignore for now
+
+
+    def title(self): 
+        self.titleSTR = "NOTE ONE"
+        return self.titleSTR
+
+
+titles = note1() #need to create an instance of the class 
+titled = titles.title() #call the title function on the new note1 instance
+print(titled)
+No link
+#OOP #Classes #Instances #Function
+
+
+Note: 5
+Title:Using self
+
+
+When handling different functions and classes of Python. It’s important to use self to create  local variables like self.title to not affect the global variable a program might have. This is important because you could be affecting the global variable multiple times which will affect how your program executes. Additionally, it will be hard to make local changes and will be harder to debug it in the future. 
+
+
+No link
+#Variables  #Organizations #LocalVariables
+
+
+Note: 6
+
+
+Title: Explaining functions v.s objects
+
+
+foo # foo is a variable
+foo() # foo is a function
+foo.x # foo is an object which contains variable x, aka x is an attribute of foo
+foo.x() # foo is an object which contains function x, aka x is a method of foo
+foo = { "x": 5 }
+foo["x"] # foo is a dictionary that contains key 'x', line of code gets value of x which is 5
+
+
+No link
+Tags:#explanations,#basics
+
+
+Note: 7
+
+
+Title: Explaining methods
+
+
+Bar() creates instance of Bar()
+# calls __init__() on that instance
+foo = Bar()
+foo.x
+Bar.y
+# a function in a class is a method 
+#instances are editable copies that don't mess with the orginal
+
+
+No link
+Tags:#explanations,#basics
+
+
+
+
+Note: 8
+
+
+Title: Explanation of a Class
+
+
+A class can contain an object and an object can contain an attribute. How instances are affected depends if the object or attribute is local or global. self indicates it is a local variable. If it is a local variable, it can only be changed in one instance but will not be changed globally. If it is global and it is changed, any instances after the global change will contain the new change.
+
+
+No Link
+Tags: #Class, #instances, #local_variable
+
+
+Note: 9
+
+
+Title: Functions
+
+
+Basics of functions:
+-when calling the function think of as if your calling the code in the function
+-functions break up giant pieces of code
+-used to call the chunk of code multiple times
+-easy to test, easy to read, easy to call, easy to change 
+- "this is what this code does in easy short easy way"
+-function can have parameters, the words inside the () of the function, the parameters can have a type like int or float
+
+
+No Link
+Tags: #functions,#Explanations
+
+
+Note 10:
+
+
+Title: GUI and Buttons
+
+
+GUI (Graphical User Interface) in Python lets one create interactive interfaces and pictures. It contains libraries like Tkinter for building simple objects like buttons:
+
+
+import tkinter as tk
+
+
+window = tk.Tk()
+
+
+# Add a button
+button = tk.Button(window, text="Click Me!")
+
+
+button.pack()
+
+
+window.mainloop()
+
+
+No Link
+
+
+Tags:#tkinter,#buttons
+
+
